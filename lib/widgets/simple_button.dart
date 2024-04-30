@@ -1,9 +1,9 @@
 import 'dart:io';
-
-import 'package:e_com_flutter_app/theme/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../theme/palette.dart';
 
 class SimpleButton extends StatelessWidget {
   final VoidCallback? onPressed;

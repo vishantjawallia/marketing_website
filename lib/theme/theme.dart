@@ -1,5 +1,5 @@
-import 'package:e_com_flutter_app/theme/palette.dart';
 import 'package:flutter/material.dart';
+import 'package:marketing_website/theme/palette.dart';
 
 class Themes {
   static ThemeData light() {

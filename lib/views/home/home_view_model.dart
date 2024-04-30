@@ -1,15 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../models/product.dart';
-
-class ProductDetailViewModel extends BaseViewModel {
-  Product? product;
-
-  ProductDetailViewModel(this.product) {
+class HomeViewModel extends BaseViewModel {
+  HomeViewModel(){
     loadItems();
   }
-
+  
   // Add ViewModel specific code here
   Future<void> loadItems() async {
     setBusy(true);
@@ -19,4 +14,5 @@ class ProductDetailViewModel extends BaseViewModel {
     setBusy(false);
     notifyListeners();
   }
+
 }

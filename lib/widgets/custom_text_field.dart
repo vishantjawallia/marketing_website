@@ -1,9 +1,8 @@
 // ignore_for_file: no_logic_in_create_state
-
-import 'package:e_com_flutter_app/theme/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:marketing_website/theme/palette.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? hintText;

@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
-import 'package:e_com_flutter_app/models/user_model.dart';
 import 'package:get/get.dart';
+
+import '../models/user_model.dart';
 
 class MainController extends GetxController {
   MainController._();
@@ -9,7 +10,4 @@ class MainController extends GetxController {
 
   RxString token = "".obs;
   Rx<UserModel?> user = Rx(null);
-
-  
-
 }

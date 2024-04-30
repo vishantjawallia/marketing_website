@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:e_com_flutter_app/config/config.dart';
-import 'package:e_com_flutter_app/models/product.dart';
+import '../config/config.dart';
+import '../models/product.dart';
 import '../helper/helper.dart';
 import '../models/login_model.dart';
 import '../models/upload_model.dart';
