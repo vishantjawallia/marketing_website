@@ -108,9 +108,10 @@ class _HomeDesktop extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                const Image(
+                                Image.asset(
+                                  'assets/images/icon-2.png',
                                   height: 70,
-                                  image: AssetImage('assets/images/icon-2.png'),
+                                  fit: BoxFit.fill,
                                 ),
                                 const Gap(16),
                                 Text(
@@ -127,6 +128,7 @@ class _HomeDesktop extends StatelessWidget {
                                     textAlign: TextAlign.center,
                                   ),
                                 ),
+                                const Gap(14),
                               ],
                             ),
                           ),
@@ -143,9 +145,10 @@ class _HomeDesktop extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                const Image(
+                                Image.asset(
+                                  'assets/images/icon-1.png',
                                   height: 70,
-                                  image: AssetImage('assets/images/icon-1.png'),
+                                  fit: BoxFit.fill,
                                 ),
                                 const Gap(16),
                                 Text(
@@ -184,7 +187,7 @@ class _HomeDesktop extends StatelessWidget {
                                 ),
                                 const Gap(16),
                                 Text(
-                                  'Engagement ',
+                                  'Engagement',
                                   style: context.textTheme.titleLarge?.copyWith(color: const Color(0xff4D4D4D), fontSize: 28, fontWeight: FontWeight.w700),
                                   textAlign: TextAlign.center,
                                 ),
