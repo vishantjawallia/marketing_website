@@ -2,14 +2,17 @@ library about_view;
 
 import 'dart:js';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:marketing_website/components/header.dart';
 import 'package:marketing_website/widgets/simple_button.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
-import '../home/components/footer_section.dart';
-import '../home/components/header_section.dart';
+import '../../components/footer.dart';
+
 import 'about_view_model.dart';
 
 part 'about_mobile.dart';
@@ -23,21 +26,20 @@ class AboutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<AboutViewModel>.reactive(
-      viewModelBuilder: () => AboutViewModel(),
-      onModelReady: (viewModel) {
-        // Do something once your viewModel is initialized
-      },
-      builder: (context, viewModel, child) {
-        return ScreenTypeLayout(
-          mobile: _AboutMobile(viewModel),
-          desktop: _AboutDesktop(viewModel),
-          tablet: _AboutMobile(viewModel),
+        viewModelBuilder: () => AboutViewModel(),
+        onModelReady: (viewModel) {
+          // Do something once your viewModel is initialized
+        },
+        builder: (context, viewModel, child) {
+          return ScreenTypeLayout(
+            mobile: _AboutMobile(viewModel),
+            desktop: _AboutDesktop(viewModel),
+            tablet: _AboutTablet(viewModel),
 
-          //Uncomment it if you've planned to support specifically for desktop and tablet
-          //desktop: _AboutDesktop(viewModel),
-          //tablet: _AboutTablet(viewModel),  
-        );
-      }
-    );
+            //Uncomment it if you've planned to support specifically for desktop and tablet
+            //desktop: _AboutDesktop(viewModel),
+            //tablet: _AboutTablet(viewModel),
+          );
+        });
   }
 }

@@ -6,13 +6,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:marketing_website/views/home/components/header_section.dart';
+import 'package:marketing_website/components/header.dart';
 import 'package:marketing_website/widgets/custom_text_field.dart';
 import 'package:marketing_website/widgets/simple_button.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
-import 'components/footer_section.dart';
+import '../../components/footer.dart';
 import 'home_view_model.dart';
 
 part 'home_mobile.dart';

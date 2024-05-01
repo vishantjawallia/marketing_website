@@ -9,7 +9,7 @@ class _HomeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HeaderSection(onTap: viewModel.onPageChange, loginTap: viewModel.loginTap, signUpTap: viewModel.signUpTap),
+      appBar: HeaderComponent(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -89,8 +89,12 @@ class _HomeDesktop extends StatelessWidget {
                   ),
                   const Gap(80),
                   Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    child: Wrap(
+                      alignment: WrapAlignment.spaceEvenly,
+                      direction: Axis.horizontal,
+                      runSpacing: 30,
+                      spacing: 30,
+                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Material(
                           color: Colors.white,
@@ -238,6 +242,8 @@ class _HomeDesktop extends StatelessWidget {
                         Text(
                           'Connect with Your New Community. At Home, we understand that the journey of settling into a new country can be both exciting and challenging. Whether you have questions about navigating immigration processes, finding accommodation, or simply want to share your journey, our forum provides a supportive space for open dialogue.',
                           style: context.textTheme.bodyLarge?.copyWith(color: const Color(0xff717171)),
+                          maxLines: 7,
+                          overflow: TextOverflow.ellipsis,
                         ),
                         const Gap(26),
                         SimpleButton(width: 170, height: 48, onPressed: viewModel.signUpHanler, text: 'Learn More'),
@@ -428,7 +434,7 @@ class _HomeDesktop extends StatelessWidget {
               ),
             ),
 
-            const FooterSection(),
+            const FooterComponent(),
           ],
         ),
       ),

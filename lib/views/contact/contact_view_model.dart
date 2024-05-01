@@ -1,10 +1,13 @@
 import 'package:stacked/stacked.dart';
 
 class ContactViewModel extends BaseViewModel {
-  ContactViewModel(){
+  List subjects = ['General Inquiry', 'General Inquiry', 'General Inquiry', 'General Inquiry'];
+  String subject = "";
+  ContactViewModel() {
+    subject = subjects.first;
     loadItems();
   }
-  
+
   // Add ViewModel specific code here
   Future<void> loadItems() async {
     setBusy(true);
@@ -15,13 +18,9 @@ class ContactViewModel extends BaseViewModel {
     notifyListeners();
   }
 
+  void onPageChange(String value) {}
 
-  void onPageChange(String value) {
-  }
+  void loginTap() {}
 
-  void loginTap() {
-  }
-
-  void signUpTap() {
-  }
+  void signUpTap() {}
 }
