@@ -53,67 +53,50 @@ class _CustomTextFieldState extends State<CustomTextField> {
   _CustomTextFieldState(this.isObscureText);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10, bottom: 0, right: 16, left: 16),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 6),
-            child: Text(
-              '${widget.hintText}',
-              style: context.textTheme.bodyLarge,
-            ),
+    return Container(
+      height: 44,
+      width: 340,
+      child: TextFormField(
+        onChanged: widget.onChanged,
+        onTap: widget.onTap,
+        enabled: widget.enabled ?? true,
+        controller: widget.controller,
+        keyboardType: widget.keyboardType ?? TextInputType.visiblePassword,
+        obscureText: widget.obscureText != null ? (isObscureText ?? widget.obscureText!) : false,
+        inputFormatters: widget.inputFormatters ?? [],
+        style: context.textTheme.bodyLarge,
+        validator: widget.validator,
+
+        buildCounter: widget.buildCounter,
+        // cursorColor: Colors.black54,
+        decoration: InputDecoration(
+          isDense: true,
+          floatingLabelBehavior: FloatingLabelBehavior.never,
+          hintText: widget.hintText ?? "Password",
+          hintStyle: context.textTheme.bodyLarge?.copyWith(color: Colors.grey.shade200, fontSize: 15),
+          filled: true,
+          fillColor: Colors.grey.shade900,
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(8),
           ),
-          const SizedBox(height: 8),
-          TextFormField(
-            onChanged: widget.onChanged,
-            onTap: widget.onTap,
-            enabled: widget.enabled ?? true,
-            controller: widget.controller,
-            keyboardType: widget.keyboardType ?? TextInputType.visiblePassword,
-            obscureText: widget.obscureText != null ? (isObscureText ?? widget.obscureText!) : false,
-            inputFormatters: widget.inputFormatters ?? [],
-            style: context.textTheme.bodyLarge,
-            validator: widget.validator,
-            buildCounter: widget.buildCounter,
-            // cursorColor: Colors.black54,
-            decoration: InputDecoration(
-              floatingLabelBehavior: FloatingLabelBehavior.never,
-              hintText: widget.hintText ?? "Password",
-              hintStyle: context.textTheme.bodyLarge?.copyWith(color: context.isDarkMode ? Colors.grey.shade200 : Colors.grey.shade700, fontSize: 15),
-              filled: true,
-              fillColor: context.isDarkMode ? Colors.grey.shade900 : Colors.grey.shade300,
-              border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              prefixIcon: widget.iconData == null
-                  ? null
-                  : Icon(
-                      widget.iconData ?? Icons.lock_rounded,
-                      size: 24,
-                      color: Palettes.primary,
-                    ),
-              suffixIcon: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
-                child: GestureDetector(
-                  onTap: () {
-                    if (widget.obscureText != null) setState(() => isObscureText = !isObscureText!);
-                  },
-                  child: widget.obscureText != null
-                      ? Icon(
-                          (isObscureText ?? widget.obscureText!) ? Icons.visibility_off_rounded : Icons.visibility_rounded,
-                          size: 24,
-                          color: Colors.grey,
-                        )
-                      : const SizedBox(),
+          prefixIcon: widget.iconData == null
+              ? null
+              : Icon(
+                  widget.iconData ?? Icons.lock_rounded,
+                  size: 24,
+                  color: Palettes.primary,
                 ),
-              ),
+          suffixIcon: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
+            child: GestureDetector(
+              onTap: () {
+                if (widget.obscureText != null) setState(() => isObscureText = !isObscureText!);
+              },
+              child: Image(image: AssetImage('assets/images/send.png')),
             ),
           ),
-        ],
+        ),
       ),
     );
   }

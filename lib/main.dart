@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marketing_website/config/preference.dart';
@@ -23,11 +22,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: APP_NAME,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: Themes.light(),
       darkTheme: Themes.dark(),
+      // initialRoute: '/',
       home: HomeView(),
-      getPages: routes,
+      // routes: routes,
+      getPages: getPages,
     );
   }
 }

@@ -1,8 +1,18 @@
 library home_view;
 
+import 'dart:js';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
+import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:marketing_website/views/home/components/header_section.dart';
+import 'package:marketing_website/widgets/custom_text_field.dart';
+import 'package:marketing_website/widgets/simple_button.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
+import 'components/footer_section.dart';
 import 'home_view_model.dart';
 
 part 'home_mobile.dart';
@@ -16,21 +26,21 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
-      viewModelBuilder: () => HomeViewModel(),
-      onModelReady: (viewModel) {
-        // Do something once your viewModel is initialized
-      },
-      builder: (context, viewModel, child) {
-        return ScreenTypeLayout(
-          mobile: _HomeMobile(viewModel),
-          desktop: _HomeMobile(viewModel),
-          tablet: _HomeMobile(viewModel),
+        viewModelBuilder: () => HomeViewModel(),
+        onModelReady: (viewModel) {
+          // Do something once your viewModel is initialized
+        },
+        builder: (context, viewModel, child) {
+          // ignore: deprecated_member_use
+          return ScreenTypeLayout(
+            mobile: _HomeMobile(viewModel),
+            desktop: _HomeDesktop(viewModel),
+            tablet: _HomeMobile(viewModel),
 
-          //Uncomment it if you've planned to support specifically for desktop and tablet
-          //desktop: _HomeDesktop(viewModel),
-          //tablet: _HomeTablet(viewModel),  
-        );
-      }
-    );
+            //Uncomment it if you've planned to support specifically for desktop and tablet
+            //desktop: _HomeDesktop(viewModel),
+            //tablet: _HomeTablet(viewModel),
+          );
+        });
   }
 }

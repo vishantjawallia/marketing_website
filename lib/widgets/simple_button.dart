@@ -9,39 +9,44 @@ class SimpleButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String? text;
   final bool? isLoading;
+  final double? width;
+  final Color? backgroundColor;
+  final Color? textColor;
+  final double? height;
 
   const SimpleButton({
     super.key,
     this.isLoading = false,
     required this.onPressed,
     required this.text,
+    this.width,
+    this.height,
+    this.backgroundColor,
+    this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 56,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 22),
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: !isLoading! ? Palettes.primary : Colors.grey.shade400,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          ),
-          onPressed: onPressed,
-          child: isLoading!
-              ? Platform.isIOS
-                  ? const CupertinoActivityIndicator(color: Palettes.primary)
-                  : const CircularProgressIndicator(color: Palettes.primary)
-              : Text(
-                  text!,
-                  style: context.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
+      width: width ?? double.infinity,
+      height: height ?? 56,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: backgroundColor ?? Colors.black,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         ),
+        onPressed: onPressed,
+        child: isLoading!
+            ? Platform.isIOS
+                ? const CupertinoActivityIndicator(color: Palettes.primary)
+                : const CircularProgressIndicator(color: Palettes.primary)
+            : Text(
+                text!,
+                style: context.textTheme.bodyLarge?.copyWith(
+                  color: textColor ?? Colors.white,
+                ),
+              ),
       ),
     );
   }
