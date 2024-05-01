@@ -108,10 +108,9 @@ class _HomeDesktop extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Image.asset(
-                                  'assets/images/Icon-2.png',
+                                const Image(
                                   height: 70,
-                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/Icon-2.png'),
                                 ),
                                 const Gap(16),
                                 Text(
@@ -145,10 +144,10 @@ class _HomeDesktop extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Image.asset(
-                                  'assets/images/Icon-1.png',
+                          
+                                const Image(
                                   height: 70,
-                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/Icon-1.png'),
                                 ),
                                 const Gap(16),
                                 Text(
