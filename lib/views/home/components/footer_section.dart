@@ -12,7 +12,7 @@ class FooterSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 230, vertical: 80),
+      padding: const EdgeInsets.symmetric(horizontal: 190, vertical: 80),
       color: Colors.black,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,

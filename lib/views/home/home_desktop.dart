@@ -14,7 +14,7 @@ class _HomeDesktop extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 230, vertical: 20),
+              padding: const EdgeInsets.only(left: 190, right: 230, top: 20, bottom: 20),
               color: const Color(0xffF5F7FA),
               child: Row(
                 children: <Widget>[
@@ -63,7 +63,7 @@ class _HomeDesktop extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(top: 80, left: 230, right: 230),
+              padding: const EdgeInsets.only(top: 80, left: 190, right: 190),
               child: Column(
                 children: [
                   Container(
@@ -90,7 +90,7 @@ class _HomeDesktop extends StatelessWidget {
                   const Gap(80),
                   Container(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Material(
                           color: Colors.white,
@@ -105,7 +105,7 @@ class _HomeDesktop extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 const Image(
-                                  height: 80,
+                                  height: 70,
                                   image: AssetImage('assets/images/icon-2.png'),
                                 ),
                                 const Gap(16),
@@ -127,7 +127,6 @@ class _HomeDesktop extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Gap(44),
                         Material(
                           color: Colors.white,
                           elevation: 10,
@@ -141,7 +140,7 @@ class _HomeDesktop extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 const Image(
-                                  height: 80,
+                                  height: 70,
                                   image: AssetImage('assets/images/icon-1.png'),
                                 ),
                                 const Gap(16),
@@ -163,7 +162,6 @@ class _HomeDesktop extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Gap(44),
                         Material(
                           color: Colors.white,
                           elevation: 10,
@@ -177,7 +175,7 @@ class _HomeDesktop extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 const Image(
-                                  height: 80,
+                                  height: 70,
                                   image: AssetImage('assets/images/Frame 115.png'),
                                 ),
                                 const Gap(16),
@@ -206,7 +204,7 @@ class _HomeDesktop extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 230).copyWith(top: 200),
+              padding: const EdgeInsets.symmetric(horizontal: 190).copyWith(top: 200),
               // color: const Color(0xffF5F7FA),
               child: Row(
                 children: <Widget>[
@@ -250,7 +248,7 @@ class _HomeDesktop extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 230, vertical: 80),
+              padding: const EdgeInsets.symmetric(horizontal: 190, vertical: 80),
               color: const Color(0xffF5F7FA),
               child: Row(
                 children: <Widget>[
@@ -296,7 +294,7 @@ class _HomeDesktop extends StatelessWidget {
             //section new
 
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 230),
+              padding: const EdgeInsets.symmetric(horizontal: 190),
               child: Row(
                 children: <Widget>[
                   const Expanded(
@@ -347,7 +345,7 @@ class _HomeDesktop extends StatelessWidget {
             ),
 
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 230, vertical: 0).copyWith(top: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 190, vertical: 0).copyWith(top: 40),
               color: const Color(0xffF5F7FA),
               child: Row(
                 children: <Widget>[

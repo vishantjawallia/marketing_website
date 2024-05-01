@@ -5,6 +5,7 @@ import 'package:marketing_website/views/home/home_view.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeViewModel extends BaseViewModel {
+   
   HomeViewModel() {
     loadItems();
   }
@@ -46,5 +47,8 @@ class HomeViewModel extends BaseViewModel {
   }
 
   void loginTap() {
+  }
+
+  void openHeaderMenu() {
   }
 }

@@ -13,6 +13,7 @@ class SimpleButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? textColor;
   final double? height;
+  final double? fontSize;
 
   const SimpleButton({
     super.key,
@@ -23,6 +24,7 @@ class SimpleButton extends StatelessWidget {
     this.height,
     this.backgroundColor,
     this.textColor,
+    this.fontSize,
   });
 
   @override
@@ -45,6 +47,7 @@ class SimpleButton extends StatelessWidget {
                 text!,
                 style: context.textTheme.bodyLarge?.copyWith(
                   color: textColor ?? Colors.white,
+                  fontSize: fontSize,
                 ),
               ),
       ),

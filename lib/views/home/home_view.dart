@@ -35,7 +35,7 @@ class HomeView extends StatelessWidget {
           return ScreenTypeLayout(
             mobile: _HomeMobile(viewModel),
             desktop: _HomeDesktop(viewModel),
-            tablet: _HomeMobile(viewModel),
+            tablet: _HomeTablet(viewModel),
 
             //Uncomment it if you've planned to support specifically for desktop and tablet
             //desktop: _HomeDesktop(viewModel),

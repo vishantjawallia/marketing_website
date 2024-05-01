@@ -24,4 +24,7 @@ class AboutViewModel extends BaseViewModel {
 
   void signUpTap() {
   }
+
+  void signUpHanler() {
+  }
 }

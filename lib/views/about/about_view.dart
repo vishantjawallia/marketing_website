@@ -1,5 +1,10 @@
 library about_view;
 
+import 'dart:js';
+
+import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:marketing_website/widgets/simple_button.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
