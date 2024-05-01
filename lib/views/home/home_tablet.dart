@@ -108,7 +108,7 @@ class _HomeTabletState extends State<_HomeTablet> {
                               children: <Widget>[
                                 const Image(
                                   height: 70,
-                                  image: AssetImage('assets/images/icon-2.png'),
+                                  image: AssetImage('assets/images/Icon-2.png'),
                                 ),
                                 const Gap(16),
                                 Text(
@@ -144,7 +144,7 @@ class _HomeTabletState extends State<_HomeTablet> {
                               children: <Widget>[
                                 const Image(
                                   height: 70,
-                                  image: AssetImage('assets/images/icon-1.png'),
+                                  image: AssetImage('assets/images/Icon-1.png'),
                                 ),
                                 const Gap(16),
                                 Text(
