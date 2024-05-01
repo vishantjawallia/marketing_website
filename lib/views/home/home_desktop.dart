@@ -109,7 +109,7 @@ class _HomeDesktop extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/icon-2.png',
+                                  'assets/images/Icon-2.png',
                                   height: 70,
                                   fit: BoxFit.fill,
                                 ),
@@ -146,7 +146,7 @@ class _HomeDesktop extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/icon-1.png',
+                                  'assets/images/Icon-1.png',
                                   height: 70,
                                   fit: BoxFit.fill,
                                 ),
